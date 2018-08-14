@@ -6,7 +6,9 @@
 
 namespace Inc\Services;
 
-class Admin implements ServiceInterface
+use Inc\Base\PluginController;
+
+class Admin extends PluginController implements ServiceInterface
 {
     public function register() {
         add_action('admin_menu', [ $this, 'addAdminPages' ]);
@@ -28,6 +30,6 @@ class Admin implements ServiceInterface
     }
 
     public function adminIndex() {
-        require_once PLUGIN_PATH . 'templates/admin.php';
+        require_once $this->pluginPath . 'templates/admin.php';
     }
 }

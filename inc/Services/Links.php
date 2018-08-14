@@ -6,11 +6,13 @@
 
 namespace Inc\Services;
 
-class Links implements ServiceInterface
+use Inc\Base\PluginController;
+
+class Links extends PluginController implements ServiceInterface
 {
     public function register()
     {
-        add_filter('plugin_action_links_' . PLUGIN_NAME, [ $this, 'settingsLink' ]);
+        add_filter('plugin_action_links_' . $this->pluginName, [ $this, 'settingsLink' ]);
     }
 
     public function settingsLink($links) {

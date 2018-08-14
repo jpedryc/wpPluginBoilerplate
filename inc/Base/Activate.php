@@ -4,7 +4,7 @@
  * @package JanpedPlugin
  */
 
-namespace Inc\Services\Base;
+namespace Inc\Base;
 
 class Activate
 {

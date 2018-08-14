@@ -17,10 +17,10 @@ final class Init
         ];
     }
 
-    public static function registerHooks()
+    public static function registerHooks($pluginFile)
     {
-        register_activation_hook(PLUGIN_FILE, [ 'Inc\\Services\\Base\\Activate', 'activate' ]);
-        register_deactivation_hook(PLUGIN_FILE, [ 'Inc\\Services\\Base\\Deactivate', 'deactivate' ]);
+        register_activation_hook($pluginFile, [ 'Inc\\Base\\Activate', 'activate' ]);
+        register_deactivation_hook($pluginFile, [ 'Inc\\Base\\Deactivate', 'deactivate' ]);
     }
 
     public static function registerServices()

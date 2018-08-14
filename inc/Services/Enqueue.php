@@ -6,7 +6,9 @@
 
 namespace Inc\Services;
 
-class Enqueue implements ServiceInterface
+use Inc\Base\PluginController;
+
+class Enqueue extends PluginController implements ServiceInterface
 {
     public function register()
     {
@@ -15,7 +17,7 @@ class Enqueue implements ServiceInterface
 
     public function enqueueBasic()
     {
-        wp_enqueue_style('janpedStyle', PLUGIN_URL . 'assets/style.css');
-        wp_enqueue_script('janpedScript', PLUGIN_URL . 'assets/script.js');
+        wp_enqueue_style('janpedStyle', $this->pluginUrl . 'assets/style.css');
+        wp_enqueue_script('janpedScript', $this->pluginUrl . 'assets/script.js');
     }
 }
