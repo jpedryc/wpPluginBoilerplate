@@ -1,0 +1,19 @@
+{
+    "name": "jan/janped-plugin",
+    "description": "A starter plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Jan Pedryc",
+            "email": "jan.pedryc@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "./inc"
+        }
+    }
+}
